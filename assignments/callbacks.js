@@ -61,21 +61,19 @@ multiplyNums (5, 10, function(multiplyNums) {
   console.log(multiplyNums)
 });
 
+// const callback = (yesOrNo) => {
+//   return yesOrNo
+// }
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-   for (i=0; i < list.length; i++) {
-    if (list[i] === item) {
-    cb(true);
-    return;}
-   }
+  return cb(list.includes(item).toString());
 
-   cb(false);
 };
- contains ('Gum', items, function(contains) {
-   console.log(contains)
- });
+
+
+console.log(contains('Pencil', items, (foo) => console.log(foo)));
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
