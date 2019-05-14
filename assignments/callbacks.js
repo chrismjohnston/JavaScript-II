@@ -65,17 +65,15 @@ multiplyNums (12, 7, function(multiplyNums) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  for(let i = 0; i < list.length; i++) {
-    if(list[i] === item) 
-    let result = true;
-    else let result = false;
+  if (list.indexOf(item)=== -1){
+    cb(false);
   }
-  cb(result);
+  else{
+    cb(true);
+  }
 }
 
-contains('Pencil', items, cb); {
-  console.log(contains)
-};
+contains('yo-yo' ,items,test);
 
 /* STRETCH PROBLEM */
 
